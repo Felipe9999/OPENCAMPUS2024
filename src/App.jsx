@@ -19,6 +19,7 @@ function App() {
         Open Campus 2021
       </h1>
       <img src={image} />
+
       <h2>{nombreState?"Bienvenido: "+nombreState:"Por favor inscribase"}</h2>
     </Container>
   )
@@ -42,14 +43,14 @@ const Container = styled.div`
     background-color: #23356C;
     border-radius: 5px;
     padding: 10px 20px;
-    color: white;
+    color: black;
     font-size: 20px;
     border: none;
     cursor: pointer;
   }
 
   h2{
-    color: black;
+    color: red;
     margin: 0;
   }
 `
