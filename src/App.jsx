@@ -1,12 +1,12 @@
 import styled from 'styled-components'
-import image from './assets/sabanahack.png'
+import image from './assets/opencampus.png'
 import { useState } from 'react'
 function App() {
 
   const [nombreState, setNombreState] = useState(null);
 
   const inscribirse = () =>{
-    var nombre = ""
+    var nombre = prompt("Entra tu nombre aqui")
     if(nombre){
       setNombreState(nombre)
     }
@@ -16,10 +16,11 @@ function App() {
   return (
     <Container>
       <h1>
-        Open Campus 2021
+        Open Campus 2024
       </h1>
       <img src={image} />
-
+      <button onClick={inscribirse}>
+        <h3>Inscribete</h3></button >
       <h2>{nombreState?"Bienvenido: "+nombreState:"Por favor inscribase"}</h2>
     </Container>
   )
@@ -34,7 +35,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 100px;
-  background-color: green;
+  background-color: #ffffff;
   img{
     width: 600px;
   }
@@ -50,7 +51,12 @@ const Container = styled.div`
   }
 
   h2{
-    color: red;
+    color: #000066;
     margin: 0;
+  }
+  h3{
+    color: #ffffff;
+    margin: 0;
+    font-size: 16px;
   }
 `
